@@ -3,6 +3,10 @@
 Built on **Kali Linux** using **Python, Flask, Selenium, DVWA**
 
 ---
+## 📽️ Demo Video
+
+[![Watch the Demo](thumbnail.png)](Xss-Demo.mp4)
+
 
 ## Features
 - Login to DVWA
