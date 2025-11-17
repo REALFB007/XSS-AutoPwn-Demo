@@ -2,6 +2,25 @@
  
 Built on **Kali Linux** using **Python, Flask, Selenium, DVWA**
 
+## 📌 Overview
+
+XSS AutoPwn Demo is a Python-based tool that automates the process of detecting and exploiting Reflected Cross-Site Scripting (XSS) vulnerabilities.
+It uses Flask for the dashboard, Selenium for browser automation, and ReportLab for generating professional PDF reports.
+
+The tool automatically:
+
+Locates target input fields
+
+Injects multiple XSS payloads
+
+Detects JavaScript execution
+
+Captures screenshots as proof
+
+Generates PDF reports
+
+Displays results through a simple web UI
+
 ---
 ## 📽️ Demo Video
 
