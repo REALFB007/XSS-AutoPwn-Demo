@@ -1,4 +1,4 @@
-# scanner.py - FINAL: Logs in + Scans XSS + Works 100%
+# scanner.py 
 
 import requests
 from bs4 import BeautifulSoup
@@ -16,14 +16,14 @@ def scan_url(target_url):
     session = requests.Session()
 
     try:
-        # === STEP 1: GET LOGIN PAGE & CSRF TOKEN ===
+        
         login_url = "http://localhost:8080/login.php"
         print(f"[+] Fetching login page...")
         login_page = session.get(login_url, timeout=10)
         soup = BeautifulSoup(login_page.text, 'html.parser')
         token = soup.find('input', {'name': 'user_token'})['value']
 
-        # === STEP 2: LOGIN ===
+        
         login_data = {
             'username': 'admin',
             'password': 'password',
@@ -38,11 +38,11 @@ def scan_url(target_url):
             return []
         print("[+] Login successful!")
 
-        # === STEP 3: GO TO XSS PAGE ===
+        
         xss_page = session.get(target_url, timeout=10)
         soup = BeautifulSoup(xss_page.text, 'html.parser')
 
-        # === STEP 4: FIND XSS FORM (name="name") ===
+        
         form = None
         for f in soup.find_all('form'):
             if f.find('input', {'name': 'name'}):
@@ -55,7 +55,7 @@ def scan_url(target_url):
 
         print("[i] XSS form found!")
 
-        # === STEP 5: INJECT PAYLOAD ===
+        
         action = form.get('action', '')
         method = form.get('method', 'get').lower()
         full_url = urllib.parse.urljoin(target_url, action)
@@ -67,7 +67,7 @@ def scan_url(target_url):
         else:
             resp = session.get(full_url, params=payload_data, timeout=10)
 
-        # === STEP 6: CHECK REFLECTION ===
+        
         if PAYLOADS[0] in resp.text:
             result = {'url': resp.url, 'payload': PAYLOADS[0]}
             results.append(result)
@@ -80,7 +80,7 @@ def scan_url(target_url):
 
     return results
 
-# === RUN TEST ===
+
 if __name__ == "__main__":
     findings = scan_url("http://localhost:8080/vulnerabilities/xss_r/")
     print(f"\nScan complete: {len(findings)} XSS found")
