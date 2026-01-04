@@ -8,7 +8,7 @@ XSS AutoPwn Demo is a Python-based tool that automates the process of detecting 
 It uses Flask for the dashboard, Selenium for browser automation, and ReportLab for generating professional PDF reports.
 
 ## Website used for Exploitation 
-Damn Vulnerable Web Application(DVWA)
+**Damn Vulnerable Web Application(DVWA)**
 
 The tool automatically:
 
