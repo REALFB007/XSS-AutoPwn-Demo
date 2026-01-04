@@ -62,13 +62,10 @@ In a controlled testing environment, the tool automatically:
 ## Installation & Setup
 
 ```bash
-git clone https://github.com/REALFB007/XSS-AutoPwn-Demo.git
-cd XSS-AutoPwn-Demo
-
+git clone https://github.com/REALFB007/XSS-Vulnerability-Tool.git
+cd XSS-Vulnerability-Tool
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-
 docker run --rm -it -p 8080:80 vulnerables/web-dvwa
-
 python app.py
