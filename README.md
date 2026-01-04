@@ -27,7 +27,7 @@ Displays results through a simple web UI
 ---
 ##  Demo Video
 
-[![Watch the Demo](thumbnail.png)](Xss-Demo.mp4)
+[![Watch the Demo](thumbnail.png)](Xss-Demo.gif)
 
 
 ## Features
