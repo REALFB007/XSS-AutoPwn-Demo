@@ -1,4 +1,4 @@
-# report.py - Makes HBKU-ready PDF with screenshot
+# report.py - Makes PDF with screenshot
 
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Image, Spacer
