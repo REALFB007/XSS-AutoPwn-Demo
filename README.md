@@ -23,7 +23,8 @@ It utilizes:
 
 DVWA is an intentionally vulnerable web application created for **learning and ethical security testing**.
 
-> **Note:**This tool is intended to be used **only on authorized test environments** such as DVWA.  
+ **Note:**This tool is intended to be used **only on authorized test environments** such as DVWA.
+ 
 > It is **not designed for testing real-world or production systems**.
 
 ---
